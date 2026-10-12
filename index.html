@@ -1,9 +1,67 @@
 <!doctype html>
 <html>
-  <head>
-    <title>This is the title of the webpage!</title>
-  </head>
-  <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
-  </body>
+	<head>
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+		<style type="text/tailwindcss">
+            @font-face {
+                font-family: "Font";
+                src: url(Marimpa.ttf);
+            }
+
+            body {
+                font-family: "Font";
+				color: #733b11;
+            }
+
+			.dotted-line {
+				background: repeating-linear-gradient(
+					to bottom,
+					#93582c 0px,
+					#93582c 26px,
+					transparent 26px,
+					transparent 40px
+				);
+			}
+
+			@theme {
+				--color-peach: #dca980;
+				--color-brown: #733b11;
+				--color-dark-brown: #462114;
+				--color-light-brown: #93582c;
+			}
+        </style>
+
+		<title>This is the title of the webpage!</title>
+	</head>
+
+	<body class="bg-peach">
+		<div class="relative gap-3 flex flex-col items-center py-5 bg-brown min-h-screen w-70 mx-auto outline-8 outline-dark-brown">
+			<div class="absolute left-2 top-1 bottom-1 w-1 rounded-full dotted-line"></div>
+			
+			<div class="absolute right-2 top-1 bottom-1 w-1 rounded-full dotted-line"></div>
+
+			<img src="mypfp.png" class="transition w-50 rounded-full outline-8 outline-light-brown">
+			
+			<p class="text-[2rem] text-peach">@Regonold520</p>
+
+			<a class="transition-colors flex items-center hover:border-peach hover:text-peach text-light-brown border-light-brown border-5 w-50 h-15 rounded-xl">
+				<div class="w-9 h-9 ml-2 bg-current [mask-image:url('./discord.svg')]
+					[mask-repeat:no-repeat] [mask-size:contain] [mask-position:center]">
+				</div>
+				
+				<p class="text-[1.75rem] ml-2 text-current">Discord</p>
+			</a>
+
+			<a class="transition-colors flex items-center hover:border-peach hover:text-peach text-light-brown border-light-brown border-5 w-50 h-15 rounded-xl">
+				<div class="w-9 h-9 ml-2 bg-current [mask-image:url('./itchdotio.svg')]
+					[mask-repeat:no-repeat] [mask-size:contain] [mask-position:center]">
+				</div>
+				
+				<p class="text-[1.75rem] ml-2 text-current">Itch.io</p>
+			</a>
+		</div>
+
+		
+	</body>
 </html>
