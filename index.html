@@ -31,17 +31,37 @@
 				--color-dark-brown: #462114;
 				--color-light-brown: #93582c;
 			}
+
+
+			::-webkit-scrollbar {
+				width: 20px;
+				
+			}
+
+			::-webkit-scrollbar-track {
+				background: #dca980;
+			}
+
+			::-webkit-scrollbar-thumb {
+				background: #733b11;
+				border-radius: 10px;
+				border: 2px solid #dca980;
+			}
+
+			::-webkit-scrollbar-thumb:hover {
+				background: #93582c;
+			}
         </style>
 
 		<title>Behold my epic site</title>
 	</head>
 
-	<body class="flex bg-peach">
+	<body class="flex h-screen overflow-hidden bg-peach">
 		<div class="relative gap-3 flex flex-col items-center py-5 bg-brown min-h-screen w-10 mx-left outline-8 outline-dark-brown">
 			<div class="absolute right-2 top-1 bottom-1 w-1 rounded-full dotted-line"></div>
 		</div>
 
-		<div class="flex flex-col flex-1 min-w-0 mx-auto px-8 py-5 gap-7">
+		<div class="flex flex-col flex-1 min-w-0 min-h-0 h-screen overflow-y-auto mx-auto px-8 py-5 gap-7">
 			<div class=" outline outline-light-brown outline-5 rounded-3xl outline-dashed w-full p-3 self-start overflow-hidden">
 				<p class="text-[1.3rem]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos quibusdam earum ab odio, ipsam dolorem sapiente illum magnam, dignissimos atque corrupti? Magnam eius perspiciatis ad maxime quibusdam minus blanditiis animi?</p>
 			</div>
@@ -85,13 +105,10 @@
 			</a>
 		</div>
 
-		<div class="flex flex-col flex-1 min-w-0 mx-auto px-8 py-5 gap-7">
+		<div class="flex flex-col flex-1 min-w-0 min-h-0 h-screen overflow-y-auto mx-auto px-8 py-5 gap-7">
 
 
-
-
-
-			<div class="flex flex-col justify-center outline outline-light-brown outline-5 rounded-3xl outline w-full p-3 self-start overflow-hidden">
+			<div class="flex flex-col shrink-0 outline outline-light-brown outline-5 rounded-3xl outline w-full p-3 overflow-hidden">
 							
 				<div class="py-3 flex flex-row justify-center w-full">
 					<p class="text-nowrap  text-[1.75rem] text-dark-brown"><i>About me</i></p>

@@ -11,6 +11,19 @@ const projects = [
         demoUrl: "https://github.com/Regonold520/Inflerna/releases/tag/v0.0.2"
     },
     {
+        name: "Anathema",
+        date: "Jun - 2026",
+        desc: `A game where you collect "heresites" to play a modified version of chess with an unstoppable faith engine and special faith gimmics, scored 2nd for "Jame Gam #59" Game Jam.`,
+        img: "AnathemaThumb.png",
+        demoUrl: "https://regonold520.itch.io/anathema"
+    },
+    {
+        name: "Mjefgee",
+        date: "Dec - 2025",
+        desc: `A funny game made in a few days where you have to manage cosmic entities of desire, this game was made in Godot, purely for fun and testing out adding a lot of polish features to a project and experimented with dialogue.`,
+        img: "MjefgeeThumb.png",
+    },
+    {
         name: "RegosPattern",
         date: "Aug - 2026",
         desc: `A program made for Hackclub's "Greeble" event which has the purpose of generating a cool pattern dependent on the result of a bunch of sliders.`,
