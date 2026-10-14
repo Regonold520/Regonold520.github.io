@@ -7,6 +7,7 @@ const projects = [
         desc: `A game based around "Dante's Inferno" where the player has to descend into the inferno with carefully built flowers to quell the layers of hell, made in LOVE2D`,
         img: "InflernaThumb.png",
         repoUrl: "https://github.com/Regonold520/Inflerna",
+        hackatimeName: "Inflerna",
         hackatimeUrl: "https://hackatime.hackclub.com/@regonold/project/Inflerna", 
         demoUrl: "https://github.com/Regonold520/Inflerna/releases/tag/v0.0.2"
     },
@@ -29,6 +30,7 @@ const projects = [
         desc: `A program made for Hackclub's "Greeble" event which has the purpose of generating a cool pattern dependent on the result of a bunch of sliders.`,
         img: "PatternThumb.png",
         repoUrl: "https://github.com/Regonold520/RegosPattern",
+        hackatimeName: "RegosPattern",
         hackatimeUrl: "https://hackatime.hackclub.com/@regonold/project/RegosPattern",
         demoUrl: "https://github.com/Regonold520/RegosPattern/releases/tag/1"
     },
@@ -38,6 +40,7 @@ const projects = [
         desc: `A recreation of Aseprite in the LOVE2D lua framework, with very minimal features but was mainly made to test the extents of LOVE.`,
         img: "SpriteThumb.png",
         repoUrl: "https://github.com/Regonold520/LoveSprite",
+        hackatimeName: "ImageTesting",
         hackatimeUrl: "https://hackatime.hackclub.com/@regonold/project/ImageTesting",
         demoUrl: "https://github.com/Regonold520/LoveSprite/releases/tag/Build2"
     },
@@ -47,7 +50,8 @@ const projects = [
         desc: `A library for the LOVE2D game framework, intended to help users to create games in a more orderly and organised fashion, it provides many utility features like, sprite caching, camera handling and advanced object drawing`,
         img: "AdoreThumb.png",
         repoUrl: "https://github.com/Regonold520/ADORE-RECODE",
-        hackatimeUrl: "https://hackatime.hackclub.com/my/projects/ADORE",
+        hackatimeName: "ADORE",
+        hackatimeUrl: "https://hackatime.hackclub.com/@regonold/project/ADORE",
         demoUrl: "https://github.com/Regonold520/ADORE-RECODE/releases/tag/v.1.0.0"
     }
 ];
@@ -89,13 +93,25 @@ function genProjectCards() {
         titleText.className = "text-nowrap  text-[1.75rem] text-dark-brown";
         titleText.textContent = proj.name;
 
+        titleHolder.append(titleText)
+
+        
+
         const dateText = document.createElement("p")
         dateText.className = "text-nowrap  text-[1.75rem] text-dark-brown";
         dateText.textContent = proj.date;
 
-        titleHolder.append(titleText)
+        
         titleHolder.append(dateText)
         card.append(titleHolder)
+
+        if (proj.hackatimeName) {
+            const timeText = document.createElement("p")
+            timeText.className = "text-nowrap  text-[1.75rem] text-dark-brown";
+            getProjTime(proj.hackatimeName).then(t => timeText.textContent = t.concat(" Time making"))
+
+            card.append(timeText)
+        } 
         
         const desc = document.createElement("p")
         desc.textContent = proj.desc;
@@ -128,3 +144,23 @@ function genProjectCards() {
 }
 
 genProjectCards();
+
+
+async function getProjTime(projName) {
+    const response = await fetch(`https://hackatime.hackclub.com/api/v1/users/regonold/project/${projName}`)
+    const data = await response.json();
+    const seconds = data.total_seconds
+    
+    const hour = Math.floor(seconds / 60 / 60)
+    const min = Math.floor(seconds / 60 % 60)
+
+    let time = ``
+
+    if (hour <= 0) {
+        time = `${min}m`
+    } else {
+        time = `${hour}h ${min}m`
+    }
+    console.log(time);
+    return time
+}
