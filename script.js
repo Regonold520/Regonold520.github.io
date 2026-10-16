@@ -183,7 +183,7 @@ async function genArticleCards() {
 
         const newImg = document.createElement("img")
         newImg.src = `articles/images/${article.img}`
-        newImg.className = `outline outline-3 outline-light-brown
+        newImg.className = `
             float-right w-110 rounded-xl ml-4 mb-2
             [shape-outside:url('articles/images/${article.img}')]`
         secondHolder.append(newImg)
