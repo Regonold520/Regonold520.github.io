@@ -57,6 +57,7 @@ const projects = [
 ];
 
 const projectsHolder = document.querySelector("#projects-holder");
+const articleHolder = document.querySelector("#article-holder");
 
 function createButton(name, proj, width) {
     const url = proj[name.toLowerCase().concat("Url")]
@@ -145,6 +146,60 @@ function genProjectCards() {
 
 genProjectCards();
 
+function getArticleInfo() {
+
+}
+
+async function genArticleCards() {
+    const response = await fetch(`articles/index.json`)
+    const data = await response.json();
+
+    
+
+    for (const art of data.articles) {
+        const response2 = await fetch(`articles/${art}`)
+        const article = await response2.json();
+
+        const card = document.createElement("div")
+        card.className = "outline outline-light-brown outline-5 rounded-3xl outline-dashed w-full p-3 self-start overflow-hidden shrink-0"
+
+        const textCol = document.createElement("div")
+        textCol.className = "flex flex-col flex-1 text-center p-3"
+
+        const titleText = document.createElement("p")
+        titleText.className = "text-[2rem] text-dark-brown"
+        titleText.textContent = article.title
+        textCol.append(titleText);
+
+        const dateText = document.createElement("p")
+        dateText.className = "text-[1.5rem]"
+        dateText.textContent = article.date
+        textCol.append(dateText);
+
+        card.append(textCol);
+
+        const secondHolder = document.createElement("div")
+        secondHolder.className = "relative"
+
+        const newImg = document.createElement("img")
+        newImg.src = `articles/images/${article.img}`
+        newImg.className = `outline outline-5 outline-light-brown
+            float-right w-110 rounded-xl ml-4 mb-2
+            [shape-outside:url('articles/images/${article.img}')]`
+        secondHolder.append(newImg)
+
+        const descText = document.createElement("p")
+        descText.className = "text-[1.5rem] p-3"
+        descText.textContent = article.desc
+        secondHolder.append(descText);
+
+        card.append(secondHolder)
+
+        articleHolder.append(card);
+    }
+}
+
+genArticleCards();
 
 async function getProjTime(projName) {
     const response = await fetch(`https://hackatime.hackclub.com/api/v1/users/regonold/project/${projName}`)
