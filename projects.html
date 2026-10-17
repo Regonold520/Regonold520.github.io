@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+	<head> 
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+		<script src="globals.js" defer></script>
+		<script src="projects.js" defer></script>
+
+		<style type="text/tailwindcss">
+            @font-face {
+                font-family: "Font";
+                src: url(Marimpa.ttf);
+            }
+
+            body {
+                font-family: "Font";
+				color: #733b11;
+            }
+
+			.dotted-line {
+				background: repeating-linear-gradient(
+					to bottom,
+					#93582c 0px,
+					#93582c 26px,
+					transparent 26px,
+					transparent 40px
+				);
+			}
+
+			@theme {
+				--color-peach: #dca980;
+				--color-brown: #733b11;
+				--color-dark-brown: #462114;
+				--color-light-brown: #93582c;
+			}
+
+			* {
+				scrollbar-width: auto;
+				scrollbar-color: #733b11 #dca980;
+			}
+        </style>
+
+		<title>Behold my epic site</title>
+	</head>
+
+	<body class="flex h-screen overflow-hidden bg-peach">
+		<div class="relative gap-3 flex flex-col items-center py-5 bg-brown min-h-screen w-10 mx-left outline-8 outline-dark-brown">
+			<div class="absolute right-2 top-1 bottom-1 w-1 rounded-full dotted-line"></div>
+		</div>
+
+		
+		<div class="w-full flex flex-col">
+			<div class="flex min-w-0 min-h-0 px-8 py-5 gap-7 items-center">	
+				<a href="index.html" class="flex justify-center w-20 h-8 rounded-2xl outline outline-5 hover:text-dark-brown hover:outline-dark-brown text-light-brown outline-light-brown transition-[color,border-color]">
+					<p class="text-nowrap text-[1.5rem] text-current">Back</p>
+				</a>
+
+				<p class="text-nowrap text-[2rem] text-dark-brown" id="proj-title">Inflerna</p>
+			</div>
+		</div>
+
+		
+
+
+
+
+		<div class="relative gap-3 flex flex-col items-center py-5 bg-brown min-h-screen w-10 mx-left outline-8 outline-dark-brown">
+			<div class="absolute right-2 top-1 bottom-1 w-1 rounded-full dotted-line"></div>
+		</div>
+		
+	</body>
+</html>
