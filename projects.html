@@ -2,13 +2,13 @@
 <html>
 	<head> 
 		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-		<script src="globals.js" defer></script>
-		<script src="projects.js" defer></script>
+		<script src="js/globals.js" defer></script>
+		<script src="js/projects.js" defer></script>
 
 		<style type="text/tailwindcss">
             @font-face {
                 font-family: "Font";
-                src: url(Marimpa.ttf);
+                src: url(fonts/Marimpa.ttf);
             }
 
             body {
@@ -48,13 +48,24 @@
 		</div>
 
 		
-		<div class="w-full flex flex-col">
-			<div class="flex min-w-0 min-h-0 px-8 py-5 gap-7 items-center">	
+		<div class="w-full flex flex-col px-8 gap-7" id="stuff-holder">
+			<div class="flex min-w-0 min-h-0 py-10 h-10 py-5 gap-7 items-center" >	
+				<a href="index.html" class="flex justify-center w-20 h-8 rounded-2xl outline outline-5 hover:text-dark-brown hover:outline-dark-brown text-light-brown outline-light-brown transition-[color,border-color]">
+					<p class="text-nowrap text-[1.5rem] text-current">Back</p>
+				</a>
+				
+				<div class="flex flex-1 justify-between">
+					<p class="text-nowrap text-[2rem] text-dark-brown" id="proj-title"></p>
+					<p class="text-nowrap text-[2rem] text-dark-brown" id="proj-date"></p>
+				</div>
+			</div>
+			<div id="thumbnail-holder"></div>
+
+			<div id="links-holder" class="flex h-20 gap-7">
 				<a href="index.html" class="flex justify-center w-20 h-8 rounded-2xl outline outline-5 hover:text-dark-brown hover:outline-dark-brown text-light-brown outline-light-brown transition-[color,border-color]">
 					<p class="text-nowrap text-[1.5rem] text-current">Back</p>
 				</a>
 
-				<p class="text-nowrap text-[2rem] text-dark-brown" id="proj-title">Inflerna</p>
 			</div>
 		</div>
 

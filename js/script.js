@@ -28,7 +28,7 @@ function genProjectCards() {
         if (proj.img) {
             const newImg = document.createElement("img")
             newImg.className = "rounded-xl outline-4 outline-brown";
-            newImg.src = proj.img
+            newImg.src = "images/projects/".concat(proj.img); 
 
             card.append(newImg)
         }
@@ -95,18 +95,15 @@ function genProjectCards() {
 
 genProjectCards();
 
-function getArticleInfo() {
-
-}
 
 async function genArticleCards() {
-    const response = await fetch(`articles/index.json`)
+    const response = await fetch(`json/articles/index.json`)
     const data = await response.json();
 
     
 
     for (const art of data.articles) {
-        const response2 = await fetch(`articles/${art}`)
+        const response2 = await fetch(`json/articles/${art}`)
         const article = await response2.json();
 
         const card = document.createElement("div")
@@ -131,10 +128,10 @@ async function genArticleCards() {
         secondHolder.className = "relative"
 
         const newImg = document.createElement("img")
-        newImg.src = `articles/images/${article.img}`
+        newImg.src = `images/articles/${article.img}`
         newImg.className = `
             float-right w-110 rounded-xl ml-4 mb-2
-            [shape-outside:url('articles/images/${article.img}')]`
+            [shape-outside:url('images/articles/${article.img}')]`
         secondHolder.append(newImg)
 
         const descText = document.createElement("p")
