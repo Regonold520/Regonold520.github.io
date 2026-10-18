@@ -51,6 +51,9 @@ projectsReady.then(() => {
     const projectsTitle = document.querySelector("#proj-title");
     projectsTitle.textContent = projectName
 
+    const projectDesc = document.querySelector("#project-desc");
+    projectDesc.textContent = currentProj.longDesc
+
     const projectsDate = document.querySelector("#proj-date");
     projectsDate.textContent =  "Created ".concat(currentProj.date);
 

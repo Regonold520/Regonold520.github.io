@@ -70,6 +70,7 @@ async function cacheProjects() {
             name: proj.name,
             date: proj.date,
             desc: proj.shortDesc,
+            longDesc: proj.longDesc,
             img: proj.thumbnail,
             techStack: proj.techStack
         }
