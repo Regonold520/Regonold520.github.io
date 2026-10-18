@@ -1,4 +1,4 @@
-const projects = [
+const projects2 = [
     {
         name: "Inflerna",
         date: "Feb - 2026",
@@ -53,6 +53,59 @@ const projects = [
         demoUrl: "https://github.com/Regonold520/ADORE-RECODE/releases/tag/v.1.0.0"
     }
 ];
+
+const projects = [];
+
+async function cacheProjects() {
+    const response = await fetch(`json/projects/index.json`)
+    const data = await response.json();
+
+    
+
+    for (const pro of data.projects) {
+        const response2 = await fetch(`json/projects/${pro}.json`)
+        const proj = await response2.json();
+
+        let newEntry = {
+            name: proj.name,
+            date: proj.date,
+            desc: proj.shortDesc,
+            img: proj.thumbnail,
+            techStack: proj.techStack
+        }
+
+        if (proj.repoUrl) {newEntry.repoUrl = proj.repoUrl;}
+        if (proj.hackatimeUrl) {
+            newEntry.hackatimeUrl = proj.hackatimeUrl;
+            newEntry.hackatimeName = proj.hackatimeName;
+        }
+        if (proj.demoUrl) {newEntry.demoUrl = proj.demoUrl;}
+
+        projects.push(newEntry);
+    }
+}
+
+const techs = {
+    godot: {
+        name: "Godot",
+        url: "https://godotengine.org/",
+        icon: "godot"
+    },
+    lua: {
+        name: "Lua",
+        url: "https://www.lua.org/",
+        icon: "lua"
+    },
+    love2d: {
+        name: "Love2D",
+        url: "https://love2d.org/",
+        icon: "love2d"
+    }
+}
+
+const projectsReady = cacheProjects();
+
+
 
 function getProj(name) {
     let returnProj = null

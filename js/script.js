@@ -93,8 +93,9 @@ function genProjectCards() {
     }
 }
 
-genProjectCards();
-
+projectsReady.then(() => {
+    genProjectCards();
+})
 
 async function genArticleCards() {
     const response = await fetch(`json/articles/index.json`)
