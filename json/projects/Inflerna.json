@@ -2,14 +2,15 @@
     "name": "Inflerna",
     "date": "Feb - 2026",
     "shortDesc": "A game based around Dante's Inferno where the player has to descend into the inferno with carefully built flowers to quell the layers of hell, made in LOVE2D",
-    "longDesc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet temporibus beatae pariatur repellendus. Amet, tenetur sed dicta ratione id quae soluta expedita sequi commodi? Illum unde odio repellendus quod. Incidunt vero neque quis quaerat minus necessitatibus autem obcaecati sapiente amet consequatur veritatis, tempora laborum debitis hic, quisquam esse expedita recusandae deserunt! Cum cumque ducimus praesentium officiis totam cupiditate repellendus. Neque omnis eaque, totam, laboriosam amet, suscipit repudiandae pariatur quos delectus voluptatibus sapiente laudantium libero itaque excepturi. Minima, earum deserunt eum ex obcaecati mollitia numquam ducimus voluptatem aperiam. Fugit, molestiae.",
+    "longDesc": "Inflerna is a game ive been making based off Dante's Inferno where the premise is, you use the 7 holy virtues to create flowers imbued with them, then equip those flowers with Deeds and Attack pages, then travel down to the Inferno with them and attempt to defeat all the layers of hell with them, everytime you lose a run you come back with shards you can synchronise for better deeds or pages, The game is made in  the LOVE2D framework and has been a huge learning experience for me, I  have a steamworks page and plan on releasing it on Steam sometime (Whenever its done), this is my main project, my pride and joy with over 100 hours logged on hackatime! The game still has a long way to go and I have many more features yet to implement but most of my development time so far has been spent developing the underlying engine, making it very polished and reusable for any LOVE2D project.",
 
     "thumbnail": "InflernaThumb.png",
-    "images": ["Inflerna-1","Inflerna-2","Inflerna-3","Inflerna-4","Inflerna-5"],
+    "images": ["Inflerna-1","Inflerna-2","Inflerna-3","Inflerna-4","Inflerna-5", "Inflerna-6"],
     "techStack": ["lua", "love2d"],
 
     "repoUrl": "https://github.com/Regonold520/Inflerna",
     "hackatimeName": "Inflerna",
     "hackatimeUrl": "https://hackatime.hackclub.com/@regonold/project/Inflerna", 
-    "demoUrl": "https://github.com/Regonold520/Inflerna/releases/tag/v0.0.2"
+    "demoUrl": "https://github.com/Regonold520/Inflerna/releases/tag/v0.0.2",
+    "mainProj": true
 }

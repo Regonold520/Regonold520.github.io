@@ -52,6 +52,33 @@ projectsReady.then(() => {
     const projectsTitle = document.querySelector("#proj-title");
     projectsTitle.textContent = projectName
 
+   
+
+    if (currentProj.hackatimeName) {
+        const projectsHours = document.querySelector("#proj-hours");
+        getProjTime(currentProj.hackatimeName).then(t => projectsHours.textContent = t.concat(" Time spent coding"))
+    } 
+
+    if (currentProj.mainProj == true) {
+        const topBar = document.querySelector("#top-bar");
+
+        const newHolder = document.createElement("div");
+        newHolder.className = "flex overflow-hidden items-center gap-3 w-50 h-10  rounded-2xl outline outline-5 text-[#ffd467] outline-[#ffd467]";
+
+        const icon = document.createElement("div");
+        icon.className = `w-7 h-7 ml-2 bg-current [mask-image:url('./icons/star.svg')]
+                [mask-repeat:no-repeat] [mask-size:contain] [mask-position:center]`;
+
+        const newTxt = document.createElement("p");
+        newTxt.className = "py-1 text-nowrap text-[1.5rem] text-current";
+        newTxt.textContent = "Main Project";
+
+        newHolder.append(icon);
+        newHolder.append(newTxt);
+
+        topBar.append(newHolder);
+    }
+
     const projectDesc = document.querySelector("#project-desc");
     projectDesc.textContent = currentProj.longDesc
 
@@ -86,7 +113,7 @@ projectsReady.then(() => {
 
     for (const img of currentProj.images) {
         const newEntry = document.createElement("img");
-        newEntry.className = "w-full mb-4 break-inside-avoid outline outline-dark-brown outline-5 rounded-2xl";
+        newEntry.className = "w-full mb-4 break-inside-avoid outline outline-brown outline-5 rounded-2xl";
         newEntry.src = `images/projects/${projectName}/${img}.png`;
 
         galleryHolder.append(newEntry);

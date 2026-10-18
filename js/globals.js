@@ -73,7 +73,8 @@ async function cacheProjects() {
             longDesc: proj.longDesc,
             img: proj.thumbnail,
             techStack: proj.techStack,
-            images: proj.images
+            images: proj.images,
+            mainProj: proj.mainProj
         }
 
         if (proj.repoUrl) {newEntry.repoUrl = proj.repoUrl;}
@@ -115,4 +116,23 @@ function getProj(name) {
         if (proj.name == name) {returnProj = proj}
     }
     return returnProj
+}
+
+async function getProjTime(projName) {
+    const response = await fetch(`https://hackatime.hackclub.com/api/v1/users/regonold/project/${projName}`)
+    const data = await response.json();
+    const seconds = data.total_seconds
+    
+    const hour = Math.floor(seconds / 60 / 60)
+    const min = Math.floor(seconds / 60 % 60)
+
+    let time = ``
+
+    if (hour <= 0) {
+        time = `${min}m`
+    } else {
+        time = `${hour}h ${min}m`
+    }
+    console.log(time);
+    return time
 }
