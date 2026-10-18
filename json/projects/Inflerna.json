@@ -5,7 +5,7 @@
     "longDesc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet temporibus beatae pariatur repellendus. Amet, tenetur sed dicta ratione id quae soluta expedita sequi commodi? Illum unde odio repellendus quod. Incidunt vero neque quis quaerat minus necessitatibus autem obcaecati sapiente amet consequatur veritatis, tempora laborum debitis hic, quisquam esse expedita recusandae deserunt! Cum cumque ducimus praesentium officiis totam cupiditate repellendus. Neque omnis eaque, totam, laboriosam amet, suscipit repudiandae pariatur quos delectus voluptatibus sapiente laudantium libero itaque excepturi. Minima, earum deserunt eum ex obcaecati mollitia numquam ducimus voluptatem aperiam. Fugit, molestiae.",
 
     "thumbnail": "InflernaThumb.png",
-    "images": [],
+    "images": ["Inflerna-1","Inflerna-2","Inflerna-3","Inflerna-4","Inflerna-5"],
     "techStack": ["lua", "love2d"],
 
     "repoUrl": "https://github.com/Regonold520/Inflerna",

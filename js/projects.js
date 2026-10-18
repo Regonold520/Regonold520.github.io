@@ -44,6 +44,7 @@ function genTechButton(tech) {
 
 const linksHolder = document.querySelector("#links-holder");
 const techHolder = document.querySelector("#tech-holder");
+const galleryHolder = document.querySelector("#gallery-holder");
 
 projectsReady.then(() => {
     const currentProj = getProj(projectName);
@@ -81,6 +82,14 @@ projectsReady.then(() => {
 
     for (const tech of currentProj.techStack) {
         techHolder.append(genTechButton(tech));
+    }
+
+    for (const img of currentProj.images) {
+        const newEntry = document.createElement("img");
+        newEntry.className = "w-full mb-4 break-inside-avoid outline outline-dark-brown outline-5 rounded-2xl";
+        newEntry.src = `images/projects/${projectName}/${img}.png`;
+
+        galleryHolder.append(newEntry);
     }
     
 })

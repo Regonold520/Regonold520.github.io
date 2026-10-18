@@ -72,7 +72,8 @@ async function cacheProjects() {
             desc: proj.shortDesc,
             longDesc: proj.longDesc,
             img: proj.thumbnail,
-            techStack: proj.techStack
+            techStack: proj.techStack,
+            images: proj.images
         }
 
         if (proj.repoUrl) {newEntry.repoUrl = proj.repoUrl;}
