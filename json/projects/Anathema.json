@@ -1,0 +1,13 @@
+{
+    "name": "Anathema",
+    "date": "Feb - 2026",
+    "shortDesc": "A game where you collect heresites to play a modified version of chess with an unstoppable faith engine and special faith gimmics, scored 2nd for Jame Gam #59 Game Jam.",
+    "longDesc": "Anathema is a game made for Jame Gam #59 in which you collece Heresites to play a spin on the game chess where different heresites have different move patterns and abilities, and they interact in many different ways. This game was a huge test for me because i had a very ambitious idea for the jam and i made very modular systems to achieve my goal, I had a lot of experience with that kinda stuff from a previous project anways, but it was all worth it because it ended up scoring 2nd in the jam.",
+
+    "thumbnail": "AnathemaThumb.png",
+    "images": ["Anathema-1","Anathema-2","Anathema-3","Anathema-4","Anathema-5"],
+    "techStack": ["godot"],
+
+    "demoUrl": "https://regonold520.itch.io/anathema",
+    "mainProj": false
+}

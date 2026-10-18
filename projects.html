@@ -42,11 +42,18 @@
 		<title>Behold my epic site</title>
 	</head>
 
+	
 	<body class="flex min-h-screen bg-peach">
 		<div class="relative gap-3 flex flex-col items-center py-5 bg-brown min-h-screen w-10 mx-left outline-8 outline-dark-brown">
 			<div class="absolute right-2 top-1 bottom-1 w-1 rounded-full dotted-line"></div>
 		</div>
-
+		
+		<dialog id="image-viewer" class="fixed inset-0 m-0 p-0 w-screen h-screen max-w-none max-h-none bg-transparent backdrop:bg-gray-800/90">
+			<div class="flex w-full h-full flex-col items-center justify-center gap-4 p-4">
+				<img src="" id="viewer-image"
+					class="max-w-[60vw] max-h-[60vw] w-auto object-contain outline outline-brown outline-5 rounded-2xl">
+			</div>
+		</dialog>
 		
 		<div class="w-full min-h-screen flex flex-col px-8 gap-7" id="stuff-holder">
 			<div class="flex min-w-0 min-h-0 py-10 h-10 py-5 gap-7 items-center" >	

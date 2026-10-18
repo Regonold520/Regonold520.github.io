@@ -116,6 +116,23 @@ projectsReady.then(() => {
         newEntry.className = "w-full mb-4 break-inside-avoid outline outline-brown outline-5 rounded-2xl";
         newEntry.src = `images/projects/${projectName}/${img}.png`;
 
+        const viewer = document.querySelector("#image-viewer");
+        const viewerImg = document.querySelector("#viewer-image");
+
+        viewer.addEventListener("click", (event) => {
+            if (!viewerImg.contains(event.target)) {
+                viewer.close();
+            }
+        })
+
+        newEntry.addEventListener("click", (event) => {
+            viewerImg.src = `images/projects/${projectName}/${img}.png`;
+
+            viewer.showModal();
+        })
+
+        
+
         galleryHolder.append(newEntry);
     }
     
