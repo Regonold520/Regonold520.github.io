@@ -1,0 +1,16 @@
+{
+    "name": "RegosPattern",
+    "date": "Aug - 2026",
+    "shortDesc": "A program made for Hackclub's 'Greeble' event which has the purpose of generating a cool pattern dependent on the result of a bunch of sliders.",
+    "longDesc": "RegosPattern (amply named after myself) is a program I made for the hackclub event 'Greeble' in which you had to develop a program with the inate function of generating a pattern to be put on mechandise, I coded for 10 hours so I could get my pattern on a shirt (I have it), the generator works by using all those funny sliders you see in the image to the left to overlay a couple noise values on top of each other and bim bam boom we have a sick pattern which you can export to your hearts content, now the main challenge of developing this program was not the generation, however it was developing the UI because being made in LOVE2D I had to slave away coding the UI all by myself, being sliders, buttons, text boxes and packaging it all in a nice bow to make it very easy to add and edit those such elements, the project ended up turning quite nice though and while not being the most ambitious project of them all it still has quite a bit of technical complexity in its simplistic design.",
+
+    "thumbnail": "PatternThumb.png",
+    "images": ["Pattern-1","Pattern-2","Pattern-3"],
+    "techStack": ["lua", "love2d"],
+
+    "repoUrl": "https://github.com/Regonold520/RegosPattern",
+    "hackatimeName": "RegosPattern",
+    "hackatimeUrl": "https://hackatime.hackclub.com/@regonold/project/RegosPattern", 
+    "demoUrl": "https://github.com/Regonold520/RegosPattern/releases/tag/1",
+    "mainProj": false
+}

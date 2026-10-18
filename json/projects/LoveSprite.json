@@ -1,0 +1,16 @@
+{
+    "name": "LoveSprite",
+    "date": "Jan - 2026",
+    "shortDesc": "A game based around Dante's Inferno where the player has to descend into the inferno with carefully built flowers to quell the layers of hell, made in LOVE2D",
+    "longDesc": "LoveSprite is a application I was developing for the hackclub event 'Flavortown', it originally stemmed from when i was reading the LOVE2D docs and i found a setPixel() function that peaked my interest, I proceeded to spend all night (literally) coding an aseprite clone in LOVE2D, This project was mainly a test for me to gague just how far I can take the LOVE engine even though it is a mere game engine. The result was a semi-functional pixel art editor fully created by myself fit with a cool resizeable GUI and a few tools, it may not be at the scale of Aseprite but seeing as it was made by just me in about 30 hours id say it was a sucessfull experiment, it taught me a lot of things to do with handling UI and wierd data managment in Lua, i also learnt a lot of cool and niche tools for editing pixels like mappings and other things. And that godamn checkerboard pattern, coding that took a lot longer than you would think, but it turned out good in the end so I can't complain.",
+
+    "thumbnail": "SpriteThumb.png",
+    "images": ["LoveSprite-1","LoveSprite-2","LoveSprite-3","LoveSprite-4"],
+    "techStack": ["lua", "love2d"],
+
+    "repoUrl": "https://github.com/Regonold520/LoveSprite",
+    "hackatimeName": "ImageTesting",
+    "hackatimeUrl": "https://hackatime.hackclub.com/@regonold/project/ImageTesting", 
+    "demoUrl": "https://github.com/Regonold520/LoveSprite/releases/tag/Build2",
+    "mainProj": false
+}

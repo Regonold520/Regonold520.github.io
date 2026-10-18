@@ -1,0 +1,12 @@
+{
+    "name": "Mjefgee",
+    "date": "Dec - 2025",
+    "shortDesc": "A funny game made in a few days where you have to manage cosmic entities of desire, this game was made in Godot, purely for fun and testing out adding a lot of polish features to a project and experimented with dialogue.",
+    "longDesc": "Mjefgee is a game I made around December 2025, This game is a funny one because in no way shape or form is it suppose to be serious, I made the base game loop in one night because I was very bored and I was on call with my friends and I got one of them (Nightemerald) to compose the intentionally satire music for it. The basic premise of the game is as follows, you have to satiate the entities of desire by doing different things, feeding gluttony, appeasing greed, and I never coded the lust one... Regardless of its unfinished stature Mjefgee taught me a lot to do with interactables and the static camera philosophy, the silly art and even sillier sound effects collate into one of the best games of ALL TIME.",
+
+    "thumbnail": "MjefgeeThumb.png",
+    "images": ["Mjefgee-1","Mjefgee-2","Mjefgee-3","Mjefgee-4","Mjefgee-5"],
+    "techStack": ["godot"],
+
+    "mainProj": false
+}
