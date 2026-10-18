@@ -58,7 +58,7 @@ projectsReady.then(() => {
 
 
     const newImg = document.createElement("img")
-    newImg.className = "rounded-xl outline-4 outline-brown w-full block ";
+    newImg.className = "rounded-xl outline-4 outline-brown w-full block";
     newImg.src = "images/projects/".concat(currentProj.img);
 
     thumbnailHolder.append(newImg)
