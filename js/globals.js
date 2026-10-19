@@ -103,7 +103,17 @@ const techs = {
         name: "Love2D",
         url: "https://love2d.org/",
         icon: "love2d"
-    }
+    },
+    java: {
+        name: "Java",
+        url: "https://www.java.com/en/",
+        icon: "java"
+    },
+    minecraft: {
+        name: "Minecraft",
+        url: "https://www.minecraft.net/en-us",
+        icon: "minecraft"
+    },
 }
 
 const projectsReady = cacheProjects();

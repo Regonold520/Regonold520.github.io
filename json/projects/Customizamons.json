@@ -1,0 +1,14 @@
+{
+    "name": "Customizamons",
+    "date": "Apr - 2025",
+    "shortDesc": "A Minecraft mod created for the mod Cobblemon with the intent of extra pokemon customisation, developed with Kaplin86",
+    "longDesc": "Customizamons is a project i made with my friend Kaplin86 waay back in April of 2025, the story of this one is quite interesting so back in ye olden days we played on this minecraft server called 'Project: GEOMETRA', basically a minecraft-pokemon RP server, super fun! But one day we wondered if we could make our own addon for Cobblemon (the pokemon in minecraft mod) so it took us quite a while but we ended up getting a lot of functionality, art and testing done and like properly released the mod, it hasnt been updated since then but regardless it was a very fun learning experience and I got to work with one og my close friends while I was at it, making the mod was quite confusing because i'd never made an addon for another mod before so learning how that mod worked and handled its data was also a big undertaking and 99% of the code was left for me to handle so i had to figure it out. But cool mod!",
+
+    "thumbnail": "CustomizamonsThumb.png",
+    "images": ["Customizamons-1","Customizamons-2","Customizamons-3", "Customizamons-4"],
+    "techStack": ["java", "minecraft"],
+
+    "repoUrl": "https://github.com/Regonold520/Customizamons",
+    "demoUrl": "https://modrinth.com/mod/cobblemon-customizamons",
+    "mainProj": false
+}
