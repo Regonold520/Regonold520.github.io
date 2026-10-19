@@ -3,6 +3,51 @@ const tacsHolder = document.querySelector("#tacs-holder");
 let playerTurn = true;
 
 let tacs = [];
+let turns = 0;
+
+const winConditions = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+
+    [0, 4, 8],
+    [2, 4, 6]
+]
+
+const winnerText = document.querySelector("#winner-text");
+
+function checkWin() {
+    for (const cond of winConditions) {
+        let picked = tacs[cond[0]].dataset.content;;
+        let allTrue = picked != "";
+
+        for (const idx of cond) {
+            if (tacs[idx].dataset.content != picked) {
+                allTrue = false;
+            }
+        }
+
+        if (allTrue) {
+            if (picked == "x") {
+                winnerText.textContent = "You Win"
+                return;
+            } 
+
+            if (picked == "o") {
+                winnerText.textContent = "AI Wins"
+                return;
+            } 
+        }
+    }
+    if (turns >= 8) {
+        winnerText.textContent = "Draw"
+    }
+    
+}
 
 function aiSelect() {
     const newTacs = [];
@@ -12,15 +57,14 @@ function aiSelect() {
         }
     }
 
-    if (newTacs.length == 0) {
-        const winnerText = document.querySelector("#winner-text");
-        winnerText.textContent = "You Win"
-    }
+    checkWin();
 
     const pickedTac = newTacs[Math.floor(Math.random() * newTacs.length)];
     pickedTac.dataset.content = "o";
     const icon = pickedTac.querySelector("div");
     icon.className = `w-15 h-15 bg-dark-brown  [mask-image:url('./icons/o.svg')] [mask-repeat:no-repeat] [mask-size:contain] [mask-position:center]`;
+
+    turns++;
 
     playerTurn = true;
 }
@@ -31,6 +75,8 @@ function tacClicked(tac, event) {
 
         const icon = tac.querySelector("div");
         icon.className = `w-15 h-15 bg-dark-brown  [mask-image:url('./icons/x.svg')] [mask-repeat:no-repeat] [mask-size:contain] [mask-position:center]`;
+
+        turns++;
 
         playerTurn = false;
 
